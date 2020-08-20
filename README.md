@@ -28,4 +28,5 @@ python manage.py migrate</pre>
 
 7.visit http://127.0.0.1:8000/
 
-#Demo
+# Demo
+<img src="/Demo/ajaxdjango.gif"/>
