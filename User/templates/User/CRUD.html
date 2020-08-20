@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_CRUD</title>
+    <!-- css -->
+    <link rel="stylesheet" href = "{% static 'app.css' %}">
+    <!-- bootstrap 4 js cdn native js way -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="page-header">Users</h1>
+        <hr>
+        <!-- BUTTON TO TRIGGER THE ACTION -->
+        <button type="button" class="btn btn-primary js-create-user mt-2 mb-4">Add User</button>
+        <table class="table user-table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% include 'User/includes/partial_user_list.html' %}
+            </tbody>
+        </table>
+
+        <!-- THE MODAL WE WILL BE USING -->
+        <div class="modal fade" id="modal-user">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script only -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/3.0.0/bootstrap-native.min.js"></script>
+    <script src="{% static 'app.js'%}"></script>
+</body>
+</html>

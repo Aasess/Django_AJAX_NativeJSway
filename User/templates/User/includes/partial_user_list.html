@@ -1,0 +1,15 @@
+ {% for user in users%}
+            <tr>
+                <td id="id">{{ user.id }}</td>
+                <td id="name">{{ user.name }}</td>
+                <td id="email">{{ user.email }}</td>
+                <td id="age">{{ user.age }}</td>
+                <td id="gender">{{ user.gender }}</td>
+                <td><button class="btn btn-warning float-right edit">Edit</button></td>
+                <td><button class="btn btn-danger delete">Delete</button></td>
+            </tr>
+            {% empty %}
+                <tr>
+                <td colspan="7" class="text-center" id="nobook">No Users</td>
+                </tr>
+        {% endfor %}
